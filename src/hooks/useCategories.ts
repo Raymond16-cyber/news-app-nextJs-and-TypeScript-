@@ -1,4 +1,3 @@
-// hooks/useCategories.ts
 import { useQuery } from "@tanstack/react-query";
 
 export interface Category {
@@ -10,9 +9,9 @@ export interface Category {
 }
 
 export const useCategories = () => {
-  return useQuery<any[]>({
+  return useQuery<Category[]>({
     queryKey: ["categories"],
-    queryFn: async () => {
+    queryFn: async (): Promise<Category[]> => {
       try {
         const res = await fetch("https://api.agcnewsnet.com/api/general/categories");
         

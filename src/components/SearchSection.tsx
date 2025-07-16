@@ -31,7 +31,8 @@ export default function SearchSection() {
       {/* Show search results indicator */}
       {searchQuery && (
         <div className="mt-4 text-sm text-gray-600">
-          Searching for: <span className="font-medium">"{searchQuery}"</span>
+          Searching for:{" "}
+          <span className="font-medium">&quot;{searchQuery}&quot;</span>
         </div>
       )}
     </div>

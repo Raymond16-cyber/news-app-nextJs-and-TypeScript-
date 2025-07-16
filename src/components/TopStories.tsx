@@ -54,7 +54,7 @@ export default function TopStories() {
             Unable to load stories
           </h3>
           <p className="text-gray-600 mb-4">
-            We're having trouble fetching the latest news.
+            We&apos;re having trouble fetching the latest news.
           </p>
           <button
             onClick={() => window.location.reload()}

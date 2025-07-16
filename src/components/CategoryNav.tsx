@@ -1,6 +1,6 @@
 "use client";
 
-import { useCategories } from "@/hooks/useCategories";
+import { useCategories, Category } from "@/hooks/useCategories";
 import { useAppDispatch, useAppSelector } from "@/hooks/reduxHooks";
 import { setSelectedCategory } from "@/features/category/categorySlice";
 
@@ -100,19 +100,17 @@ export default function CategoryNav() {
           </button>
 
           {/* Category Buttons */}
-          {data?.map((category: any) => (
+          {data?.map((category: Category) => (
             <button
-              key={category.category_id || category.id}
-              onClick={() =>
-                handleCategoryClick(category.category_name || category.name)
-              }
+              key={category.category_id}
+              onClick={() => handleCategoryClick(category.category_name)}
               className={`flex-shrink-0 px-6 py-3 rounded-full text-sm font-medium transition-all duration-200 ${
-                selected === (category.category_name || category.name)
+                selected === category.category_name
                   ? "bg-blue-600 text-white shadow-lg shadow-blue-600/25"
                   : "bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-md"
               }`}
             >
-              {category.category_name || category.name}
+              {category.category_name}
               {category.total_stories && (
                 <span className="ml-2 text-xs opacity-75">
                   ({category.total_stories})

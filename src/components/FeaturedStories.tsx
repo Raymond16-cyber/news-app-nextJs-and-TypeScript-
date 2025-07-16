@@ -37,7 +37,9 @@ export default function FeaturedStories() {
         <h2 className="text-3xl font-bold text-gray-900 mb-2">
           Featured Stories
         </h2>
-        <p className="text-gray-600">Hand-picked stories you shouldn't miss</p>
+        <p className="text-gray-600">
+          Hand-picked stories you shouldn&apos;t miss
+        </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
